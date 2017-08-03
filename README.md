@@ -14,6 +14,7 @@
 - [Working with storage](https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/Working_with_storage?lang=en)
 - [Setting up the Microservice Builder pipeline](https://www.ibm.com/support/knowledgecenter/en/SS5PWC/pipeline.html)
 - [Deploy Db2 into IBM Cloud private](https://developer.ibm.com/recipes/tutorials/deploy-db2-into-ibm-cloud-private/)
+- [Installing the Microservice Builder ELK Sample with Kubernetes](https://github.com/WASdev/sample.microservicebuilder.helm.elk/blob/master/installing_sample_elk_task.md)
 
 ## Docker image
 ### Create a sample nodejs image
@@ -39,8 +40,8 @@
 # References
 - [IBM Cloud Private Knowledge center](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_1.2.0/kc_welcome_containers.html)
 - [Docker](https://docs.docker.com/)
-<<<<<<< HEAD
-- [Kubernetes Concepts]
-=======
+- [Downlad Bluemix CLI](https://clis.ng.bluemix.net/ui/home.html?cm_sp=dw-bluemix-_-microservice-builder-_-devcenter&cm_mc_uid=47402820653814918773981&cm_mc_sid_50200000=1501752774)
 - [Kubernetes Concepts](https://kubernetes.io/docs/concepts/)
->>>>>>> 19f53f2645d04ebaee1d251923a6f41c55f2011a
+- [community Helm chart repo]()
+- [MicrcoService Builder Helm chart Repo]()
+- [IBM Helm chart repo]()
