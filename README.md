@@ -15,7 +15,6 @@
 - [Setting up the Microservice Builder pipeline](https://www.ibm.com/support/knowledgecenter/en/SS5PWC/pipeline.html)
 - [Deploy Db2 into IBM Cloud private](https://developer.ibm.com/recipes/tutorials/deploy-db2-into-ibm-cloud-private/)
 
-<<todo>>
 ## Docker image
 ### Create a sample nodejs image
 ### Push into IBM Cloud Private
@@ -33,7 +32,7 @@
 ## Kubernetes
 - [kubectl Usage Conventions](https://kubernetes.io/docs/user-guide/kubectl-conventions/)
 - [Security Best Practices for Kubernetes Deployment](http://blog.kubernetes.io/2016/08/security-best-practices-kubernetes-deployment.html)
--
+
 ## etcd
 - [Best practice for etcd](https://coreos.com/operators/etcd/docs/latest/best_practices.html)
 
