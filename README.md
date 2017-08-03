@@ -1,6 +1,7 @@
 # IBM Cloud Private Notebook
 
 # Preparation 
+- [preparing the cluster for installation](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_1.2.0/installing/prep_cluster.html)
 
 # install 
 
