@@ -15,5 +15,24 @@
 - [Setting up the Microservice Builder pipeline](https://www.ibm.com/support/knowledgecenter/en/SS5PWC/pipeline.html)
 - [Deploy Db2 into IBM Cloud private](https://developer.ibm.com/recipes/tutorials/deploy-db2-into-ibm-cloud-private/)
 
+<<todo>>
+## Docker image
+### Create a sample nodejs image
+### Push into IBM Cloud Private
+### Deploy the image
+### Access the application
+### Scale the application
+### View application status
+
+# Best Practices
+- [Best practices for Docker]()
+- [Best practices for Helm Chart]()
+- [Best practice for Kubernetes]()
+- [Best practice for etcd]()
+- [Best practice for 
+
 # References
 [IBM Cloud Private Knowledge center](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_1.2.0/kc_welcome_containers.html)
+[Docker]
+[Kubernetes Concepts]
+[]
