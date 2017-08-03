@@ -32,11 +32,15 @@
 ## Kubernetes
 - [kubectl Usage Conventions](https://kubernetes.io/docs/user-guide/kubectl-conventions/)
 - [Security Best Practices for Kubernetes Deployment](http://blog.kubernetes.io/2016/08/security-best-practices-kubernetes-deployment.html)
-
+-
 ## etcd
 - [Best practice for etcd](https://coreos.com/operators/etcd/docs/latest/best_practices.html)
 
 # References
 - [IBM Cloud Private Knowledge center](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_1.2.0/kc_welcome_containers.html)
 - [Docker](https://docs.docker.com/)
+<<<<<<< HEAD
+- [Kubernetes Concepts]
+=======
 - [Kubernetes Concepts](https://kubernetes.io/docs/concepts/)
+>>>>>>> 19f53f2645d04ebaee1d251923a6f41c55f2011a
