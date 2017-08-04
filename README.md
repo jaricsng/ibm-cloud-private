@@ -37,7 +37,7 @@ In System menu, you can
 
 # Demo purpose
 1. ssh into master node
-2. the do docker login
+2. docker login
 ```
 docker login master.cfc:8500
 ```
