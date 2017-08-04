@@ -18,10 +18,13 @@
 - [Load balancing applications by using session affinity](https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/Load_balancing_applications_with_session_affinity?lang=en)
 - [Configuring the Kubernetes CLI by using service account tokens](https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/Configuring_the_Kubernetes_CLI_by_using_service_account_tokens1?lang=en)
 - [Running Jenkins workloads in an IBM Cloud private environment](https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/CI_CD_Integration_with_Jenkins_in_CFC1?lang=en)
+- [Autoscaling in IBM Cloud private](https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/Autoscaling_in_IBM_Spectrum_for_Containers_clusters?lang=en)
 
 # Microservice Builder
 - [Installing the Microservice Builder fabric on to IBM Cloud private](https://www.ibm.com/support/knowledgecenter/SS5PWC/installing_fabric_task.html)
 - [Setting up the Microservice Builder pipeline](https://www.ibm.com/support/knowledgecenter/SS5PWC/pipeline.html)
+- [Install Microservice Builder ELK sample] (https://github.com/WASdev/sample.microservicebuilder.helm.elk/blob/master/installing_sample_elk_task.md)
+- [Using the ELK Sample](https://github.com/WASdev/sample.microservicebuilder.helm.elk/blob/master/sample_elk_task.md)
 
 
 # User access via ICP UI
@@ -32,13 +35,72 @@ In System menu, you can
 - add repo for helm charts
 - add users
 
+# Demo purpose
+1. ssh into master node
+2. the do docker login
+```
+docker login master.cfc:8500
+```
+
 ## Docker image
+Example
+namespace: test
+image_name: hello-world-image
+tagname: v1.0.0
+
+### tag image
+```
+docker tag image_name:tagname master.cfc:8500/namespacename/imagename:tagname
+```
+
+```
+docker tag hello-world-image:v1.0.0 master.cfc:8500/test/hello-world-image:v1.0.0
+```
+
+### Push image
+Push the image to the private image registry.
+```
+docker push master.cfc:8500/namespacename/imagename:tagname
+```
+```
+docker push master.cfc:8500/test/hello-world-image:v1.0.0
+```
+### Pull image
+```
+docker pull master.cfc:8500/namespacename/imagename:tagname
+```
+```
+docker pull master.cfc:8500/test/hello-world-image:v1.0.0
+```
 ### Create a sample nodejs image
-### Push into IBM Cloud Private
-### Deploy the image
+in the samples/nodejs folder, run the following command
+```
+docker build -t hello-world-image .
+```
+### Push & Pull into IBM Cloud Private
+[Pushing and pulling images](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_1.2.0/manage_images/using_docker_cli.html)
+### Deploy the docker image
+#### Deploy using deployment.yaml
+
+kubectl create -f deployment.yml --save-config
+
+#### Deploy using UI
+[[deploy-app-dialog-1.png]]
+[[deploy-app-dialog-1.png]]
+### Expose the application endpoint
+#### Expose the Service to Internet
+kubectl expose deployment hello-world-deployment --type="LoadBalancer"
+
+#### Expose using UI
+[[expose-app-service.png]]
+[[expose-port-mapping.png]]
+
 ### Access the application
+
 ### Scale the application
+
 ### View application status
+
 
 # Best Practices
 ## Docker
@@ -63,3 +125,4 @@ In System menu, you can
 - [MicrcoService Builder Helm chart Repo](http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/microservicebuilder/helm/)
 - [IBM Helm chart repo](https://raw.githubusercontent.com/IBM/charts/master/repo/stable/)
 - [Microservice Builder](https://developer.ibm.com/microservice-builder/)
+- [Using RBAC Authorization](https://kubernetes.io/docs/admin/authorization/rbac/)
