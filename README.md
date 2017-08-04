@@ -87,7 +87,7 @@ kubectl create -f deployment.yml --save-config
 
 #### Deploy using UI
 ![Deploy application dialog](https://github.com/jaricsng/ibm-cloud-private/blob/master/deploy-app-dialog-1.png)
-![Deploy application dialog](https://github.com/jaricsng/ibm-cloud-private/blob/master/deploy-app-dialog-1.png)
+![Deploy application dialog](https://github.com/jaricsng/ibm-cloud-private/blob/master/deploy-app-dialog-2.png)
 ### Expose the application endpoint
 #### Expose the Service to Internet
 ```
