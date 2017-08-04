@@ -99,6 +99,9 @@ kubectl expose deployment hello-world-deployment --type="LoadBalancer"
 ![Expose application dialog](https://github.com/jaricsng/ibm-cloud-private/blob/master/expose-port-mapping.png)
 
 ### Access the application
+![Access application](https://github.com/jaricsng/ibm-cloud-private/blob/master/access-app-1.png)
+![Access application](https://github.com/jaricsng/ibm-cloud-private/blob/master/access-app-2.png)
+![Access application](https://github.com/jaricsng/ibm-cloud-private/blob/master/access-app-3.png)
 
 ### Scale the application
 
