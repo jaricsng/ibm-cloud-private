@@ -81,19 +81,22 @@ docker build -t hello-world-image .
 [Pushing and pulling images](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_1.2.0/manage_images/using_docker_cli.html)
 ### Deploy the docker image
 #### Deploy using deployment.yaml
-
+```
 kubectl create -f deployment.yml --save-config
+```
 
 #### Deploy using UI
-[[deploy-app-dialog-1.png]]
-[[deploy-app-dialog-1.png]]
+[[https://github.com/jaricsng/ibm-cloud-private/blob/master/deploy-app-dialog-1.png]]
+[[https://github.com/jaricsng/ibm-cloud-private/blob/master/deploy-app-dialog-1.png]]
 ### Expose the application endpoint
 #### Expose the Service to Internet
+```
 kubectl expose deployment hello-world-deployment --type="LoadBalancer"
+```
 
 #### Expose using UI
-[[expose-app-service.png]]
-[[expose-port-mapping.png]]
+[[https://github.com/jaricsng/ibm-cloud-private/blob/master/expose-app-service.png]]
+[[https://github.com/jaricsng/ibm-cloud-private/blob/master/expose-port-mapping.png]]
 
 ### Access the application
 
