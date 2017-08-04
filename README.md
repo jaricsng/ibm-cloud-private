@@ -86,8 +86,8 @@ kubectl create -f deployment.yml --save-config
 ```
 
 #### Deploy using UI
-[[https://github.com/jaricsng/ibm-cloud-private/blob/master/deploy-app-dialog-1.png]]
-[[https://github.com/jaricsng/ibm-cloud-private/blob/master/deploy-app-dialog-1.png]]
+![Deploy application dialog](https://github.com/jaricsng/ibm-cloud-private/blob/master/deploy-app-dialog-1.png)
+![Deploy application dialog](https://github.com/jaricsng/ibm-cloud-private/blob/master/deploy-app-dialog-1.png)
 ### Expose the application endpoint
 #### Expose the Service to Internet
 ```
@@ -95,8 +95,8 @@ kubectl expose deployment hello-world-deployment --type="LoadBalancer"
 ```
 
 #### Expose using UI
-[[https://github.com/jaricsng/ibm-cloud-private/blob/master/expose-app-service.png]]
-[[https://github.com/jaricsng/ibm-cloud-private/blob/master/expose-port-mapping.png]]
+![Expose application dialog](https://github.com/jaricsng/ibm-cloud-private/blob/master/expose-app-service.png)
+![Expose application dialog](https://github.com/jaricsng/ibm-cloud-private/blob/master/expose-port-mapping.png)
 
 ### Access the application
 
