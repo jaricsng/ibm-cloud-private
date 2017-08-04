@@ -15,6 +15,22 @@
 - [Setting up the Microservice Builder pipeline](https://www.ibm.com/support/knowledgecenter/en/SS5PWC/pipeline.html)
 - [Deploy Db2 into IBM Cloud private](https://developer.ibm.com/recipes/tutorials/deploy-db2-into-ibm-cloud-private/)
 - [Installing the Microservice Builder ELK Sample with Kubernetes](https://github.com/WASdev/sample.microservicebuilder.helm.elk/blob/master/installing_sample_elk_task.md)
+- [Load balancing applications by using session affinity](https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/Load_balancing_applications_with_session_affinity?lang=en)
+- [Configuring the Kubernetes CLI by using service account tokens](https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/Configuring_the_Kubernetes_CLI_by_using_service_account_tokens1?lang=en)
+- [Running Jenkins workloads in an IBM Cloud private environment](https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/CI_CD_Integration_with_Jenkins_in_CFC1?lang=en)
+
+# Microservice Builder
+- [Installing the Microservice Builder fabric on to IBM Cloud private](https://www.ibm.com/support/knowledgecenter/SS5PWC/installing_fabric_task.html)
+- [Setting up the Microservice Builder pipeline](https://www.ibm.com/support/knowledgecenter/SS5PWC/pipeline.html)
+
+
+# User access via ICP UI
+
+In System menu, you can
+- create namespace for [multi tenancy](https://www.youtube.com/watch?v=SDFDpTMZTjc&index=2&list=PLA-Z7DV3wrOWeUQbv-C2zs3IvBCWFGpTC)
+- create quota for resource
+- add repo for helm charts
+- add users
 
 ## Docker image
 ### Create a sample nodejs image
@@ -42,6 +58,8 @@
 - [Docker](https://docs.docker.com/)
 - [Downlad Bluemix CLI](https://clis.ng.bluemix.net/ui/home.html?cm_sp=dw-bluemix-_-microservice-builder-_-devcenter&cm_mc_uid=47402820653814918773981&cm_mc_sid_50200000=1501752774)
 - [Kubernetes Concepts](https://kubernetes.io/docs/concepts/)
-- [community Helm chart repo]()
-- [MicrcoService Builder Helm chart Repo]()
-- [IBM Helm chart repo]()
+- [Community Helm chart repo](https://kubernetes-charts.storage.googleapis.com)
+- [Community Incubator helm charts repo](https://kubernetes-charts-incubator.storage.googleapis.com/)
+- [MicrcoService Builder Helm chart Repo](http://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/microservicebuilder/helm/)
+- [IBM Helm chart repo](https://raw.githubusercontent.com/IBM/charts/master/repo/stable/)
+- [Microservice Builder](https://developer.ibm.com/microservice-builder/)
