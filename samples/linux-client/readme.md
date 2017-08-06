@@ -123,6 +123,11 @@ sudo apt-get install maven
 sudo apt-get install git
 ```
 
+# Install Groovy
+```
+sudo apt-get install groovy
+```
+
 # Create Java MicrcoService
 ## Pre requisites
 - Install Bluemix CLI

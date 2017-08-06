@@ -139,3 +139,4 @@ kubectl expose deployment hello-world-deployment --type="LoadBalancer"
 - [Using RBAC Authorization](https://kubernetes.io/docs/admin/authorization/rbac/)
 - [Kubernetes tutorials](https://kubernetes.io/docs/tutorials/)
 - [About WebSphere Liberty](https://developer.ibm.com/wasdev/websphere-liberty/)
+- [Deploying the sample via a pipeline to IBM Cloud Private aka IBM Spectrum Conductor for Containers (CfC)](https://github.com/WASdev/sample.microservicebuilder.docs/blob/master/full_cfc.md)
