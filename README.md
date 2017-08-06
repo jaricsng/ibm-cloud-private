@@ -26,9 +26,11 @@
 - [Setting up the Microservice Builder pipeline](https://www.ibm.com/support/knowledgecenter/SS5PWC/pipeline.html)
 - [Install Microservice Builder ELK sample](https://github.com/WASdev/sample.microservicebuilder.helm.elk/blob/master/installing_sample_elk_task.md)
 - [Using the ELK Sample](https://github.com/WASdev/sample.microservicebuilder.helm.elk/blob/master/sample_elk_task.md)
+- Video [Microservice Builder: come build Docker containerized apps with us](https://www.youtube.com/watch?v=8w-XqDAD18g)
 
 # DevOps UrbanCode Deploy
 - [Enhance your Kubernetes Experience with UrbanCode Deploy](https://developer.ibm.com/urbancode/2017/06/28/enhance-kubernetes-experience-urbancode-deploy/)
+- [Kubernetes Blue-Green Deployments Made Easy with UrbanCode Deploy](https://developer.ibm.com/urbancode/2017/07/26/kubernetes-blue-green-deployments-made-easy-urbancode-deploy/)
 
 # User access via ICP UI
 
