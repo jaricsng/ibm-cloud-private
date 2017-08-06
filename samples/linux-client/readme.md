@@ -78,8 +78,13 @@ sudo snap install kubectl --classic
 [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
 # test kuberctl with your cluster
-ensure you setup your kube client token
+ensure you setup your IBM Clouad Private kube client token
 
 ```
 kubectl cluster-info
 ```
+
+# push or pull images from your local file system to the private image registry
+Docker image is on a node that is outside of your cluster, set up authentication from that node to the cluster
+
+[Setup instruction](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_1.2.0/manage_images/using_docker_cli.html)
