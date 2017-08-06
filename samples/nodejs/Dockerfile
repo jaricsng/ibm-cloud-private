@@ -3,7 +3,7 @@ MAINTAINER Jaric Sng <jaric.sng@gmail.com>
 
 # install deps
 ADD package.json /tmp/package.json
-#RUN cd /tmp && npm install
+RUN cd /tmp && npm install
 
 # Copy deps
 RUN mkdir -p /opt/hello-world-app && cp -a /tmp/node_modules /opt/hello-world-app
