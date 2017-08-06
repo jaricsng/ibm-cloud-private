@@ -19,6 +19,7 @@
 - [Configuring the Kubernetes CLI by using service account tokens](https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/Configuring_the_Kubernetes_CLI_by_using_service_account_tokens1?lang=en)
 - [Running Jenkins workloads in an IBM Cloud private environment](https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/CI_CD_Integration_with_Jenkins_in_CFC1?lang=en)
 - [Autoscaling in IBM Cloud private](https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/Autoscaling_in_IBM_Spectrum_for_Containers_clusters?lang=en)
+- [How Watson Health Cloud Deploys Applications with Kubernetes](http://blog.kubernetes.io/2017/07/how-watson-health-cloud-deploys.html)
 
 # Microservice Builder
 - [Installing the Microservice Builder fabric on to IBM Cloud private](https://www.ibm.com/support/knowledgecenter/SS5PWC/installing_fabric_task.html)
@@ -26,6 +27,8 @@
 - [Install Microservice Builder ELK sample](https://github.com/WASdev/sample.microservicebuilder.helm.elk/blob/master/installing_sample_elk_task.md)
 - [Using the ELK Sample](https://github.com/WASdev/sample.microservicebuilder.helm.elk/blob/master/sample_elk_task.md)
 
+# DevOps UrbanCode Deploy
+- [Enhance your Kubernetes Experience with UrbanCode Deploy](https://developer.ibm.com/urbancode/2017/06/28/enhance-kubernetes-experience-urbancode-deploy/)
 
 # User access via ICP UI
 

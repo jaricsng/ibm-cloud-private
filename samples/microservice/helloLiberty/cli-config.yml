@@ -1,0 +1,23 @@
+version : 0.0.2
+container-name-run : "helloliberty"
+container-name-tools : "bx-dev-helloliberty-tools"
+image-name-run : "helloliberty"
+
+image-name-tools : "bx-dev-java-maven-tools"
+host-path-run : "target"
+build-cmd-run : "mvn install -Dmaven.repo.local=/project/.m2/repository"
+test-cmd : "mvn install -Dmaven.repo.local=/project/.m2/repository"
+build-cmd-debug : "mvn install -Dmaven.repo.local=/project/.m2/repository"
+
+container-path-run : "/project"
+container-path-tools : "/project"
+
+container-port-map : "9080:9080,9443:9443"
+container-port-map-debug : "7777:7777"
+
+dockerfile-run : "Dockerfile"
+dockerfile-tools : "Dockerfile-tools"
+
+debug-cmd : "server debug"
+ibm-generated-id : "c3493722-acb2-4574-99df-fe8645e0aee7"
+credentials-filepath : "src/main/liberty/config/server.env, log.txt"
