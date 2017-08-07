@@ -140,3 +140,14 @@ kubectl expose deployment hello-world-deployment --type="LoadBalancer"
 - [Kubernetes tutorials](https://kubernetes.io/docs/tutorials/)
 - [About WebSphere Liberty](https://developer.ibm.com/wasdev/websphere-liberty/)
 - [Deploying the sample via a pipeline to IBM Cloud Private aka IBM Spectrum Conductor for Containers (CfC)](https://github.com/WASdev/sample.microservicebuilder.docs/blob/master/full_cfc.md)
+- [Networking with Kubernetes](https://www.youtube.com/watch?v=WwQ62OyCNz4)
+
+# Video [IBM Spectrum Conductor for Containers Community Edition](https://www.youtube.com/watch?v=jchAHkc9rDo)
+- demonstrate adding docker images
+- image namespace
+- deploy images
+- Scaling
+- update application e.g. nginx to httpd
+- rollback application e.g from httpd back to nginx
+- create storage, volume, mounting to application at deployment
+- create users, namespace
