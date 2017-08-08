@@ -141,6 +141,7 @@ public class Example {
 mvn install
 ```
 20. build and run the application
+If you encountered
 ```
 bx dev run
 ```
