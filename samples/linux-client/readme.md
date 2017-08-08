@@ -49,6 +49,8 @@ open 'etc/hosts' and your the IP accordingly
 xxx.xxx.xxx.xxx master.cfc
 ```
 11. login to master private docker Repository
+Before you can login you need to add master.cfc ca.cert into your environment.
+from the boot node, see [configure certificate](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_1.2.0/manage_images/using_docker_cli.html)
 ```
 docker login master.cfc:8500
 ```
@@ -70,14 +72,98 @@ docker tag mbdemo master.cfc:8500/test/mbdemo:v1.1
 ```
 docker push master.cfc:8500/test/mbdemo:v1.1
 ```
+13. Install bluemix configuration
+- Install bluemix CLI
+```
+sh <(curl -fsSL https://clis.ng.bluemix.net/install/linux)
+```
+-  Install bluemix dev plugin
+```
+bx plugin install dev -r Bluemix
+```
+14. Install Maven
+```
+sudo apt-get install maven
+```
+15. Install Git
+```
+sudo apt-get install git
+```
+16. Install Groovy
+```
+sudo apt-get install groovy
+```
+17. Create a new microservice
+```
+bx dev create
+```
+```
+Log in to Bluemix using the bx login command to synchronize your projects with the Bluemix dashboard, and to enable the use of Bluemix services in your project.
+? Do you wish to continue without logging in? [y/n]> y
+? Select a pattern:                        
+1. Web App
+2. Mobile App
+3. Backend for Frontend
+4. Microservice
+Enter a number> 4
 
+? Select a starter:
+1. Basic
+Enter a number> 1
+
+? Select a language:
+1. Java
+Enter a number> 1
+
+? Enter a name for your project> mbdemo
+
+The project, mbdemo, has been successfully saved into the current directory.
+OK
+```
+18. Edit the generated starter codes
+edit the sample source codes
+```
+vi ./mbdemo/src/main/java/application/rest/v1/Example.java
+```
+add the following
+```
+@Path("v1/example")
+public class Example {
+  @GET
+  @Produces(MediaType.APPLICATION_JSON)
+  public Response hello() {
+    /*
+    if (!healthy) {
+      return Response.status(503).entity("{\"status\":\"DOWN\"}").build();
+    }
+    */
+    return Response.ok("Hello world.").build();
+  }
+}
+```
+19. build only the application
+```
+mvn install
+```
+20. build and run the application
+```
+bx dev run
+```
+21. test and access your application is running
+use broswer to access it
+```
+http://192.168.122.200:9080/mbdemo/v1/example
+http://192.168.122.200:9080/mbdemo/health
+```
+22. If all is good, you are ready to tag and push your image to master.cfc
+```
+docker login master.cfc
+docker tag mbdemo master.cfc:8500/test/mbdemo:v1.0
+docker push master.cfc:8500/test/mbdemo:v1.0
+```
+23. Deploy application in IBM Cloud Private
 
 # References
-
-## start the ubuntu linux
-```
-vagrant up
-```
 
 ## suspend linux
 ```
@@ -94,11 +180,6 @@ vagrant resume
 vagrant reload
 ```
 
-## login to the linux
-```
-vagrant ssh
-```
-
 ## working the synched folder of host
 below folder is a synched folder between linux and the host
 ```
@@ -108,36 +189,6 @@ cd /vagrant
 ## update the linux
 ```
 sudo apt-get update && sudo apt-get upgrade
-```
-
-## install docker
-```
-sudo apt-get install docker.io -y
-```
-
-## start docker daemon
-```
-sudo systemctl start docker
-```
-
-## set user of docker
-```
-sudo usermod -aG docker $(whoami)
-```
-
-## install python
-```
-sudo apt-get install python -y
-```
-
-## install python pip
-```
-sudo apt-get install python-pip -y
-```
-
-## install docker python
-```
-sudo pip install docker-py
 ```
 
 ## install helm
@@ -168,17 +219,6 @@ Docker image is on a node that is outside of your cluster, set up authentication
 
 [Setup instruction](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_1.2.0/manage_images/using_docker_cli.html)
 
-```
-docker login master.cfc:8500
-```
-
-```
-docker build -t hello-world-image .
-
-docker tag mbdemo master.cfc:8500/test/mbdemo:v1.1
-docker push master.cfc:8500/test/mbdemo:v1.1
-
-```
 
 # install bluemix CLI
 - download the bluemix CLI
@@ -189,21 +229,6 @@ docker push master.cfc:8500/test/mbdemo:v1.1
 
 ```
 ./Bluemix_CLI/install_bluemix_cli
-```
-
-# Install Maven
-```
-sudo apt-get install maven
-```
-
-# Install git
-```
-sudo apt-get install git
-```
-
-# Install Groovy
-```
-sudo apt-get install groovy
 ```
 
 # Create Java MicrcoService
@@ -246,7 +271,7 @@ OK
 edit the sample source codes
 
 ```
-./jsLibertyApp/src/main/java/application/rest/v1/Example.java
+./mbdemo/src/main/java/application/rest/v1/Example.java
 ```
 add the following
 ```
@@ -254,7 +279,7 @@ add the following
 public class Example {
   @GET
   @Produces(MediaType.APPLICATION_JSON)
-  public Response healthcheck() {
+  public Response hello() {
     /*
     if (!healthy) {
       return Response.status(503).entity("{\"status\":\"DOWN\"}").build();
@@ -280,27 +305,18 @@ bx dev run
 the linux client which is created using vagrant uses 192.168.122.200 in the Vaagrantfile.
 you can access the Liberty application using the following url.
 ```
-http://192.168.122.200:9080/
+http://192.168.122.200:9080/mbdemo/v1/example
 ```
 
 ```
-curl localhost:9080/jsLibertyApp/v1/example
+curl localhost:9080/mbdemo/v1/example
 ```
 
 # Push codes to Git
 
 create a repo in github and follows the commands as provided by github, in my case,
 
-in the jsLibertyApp folder, run git init
-```
-echo "# jsLibertyApp" >> README.md
-git init
-git add .
-git commit -m "initial commit"
-git remote add origin git@github.com:js-ibm/jsLibertyApp.git
-git push -u origin master
-```
-my sample project can be found [here](https://github.com/js-ibm/jsLibertyApp)
+my sample project can be found [here](https://github.com/js-ibm/mbdemo)
 
 
 # Troubleshooting
