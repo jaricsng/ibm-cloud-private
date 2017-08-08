@@ -5,68 +5,142 @@
 Vagrant allow the rapid creation of a Linux environment using Virtualbox and automatically
 mount a [synchronize folder](https://www.vagrantup.com/docs/synced-folders/) with the host.
 
+Steps
+1. Start Linux with
+```
+vagrant up
+```
+2. Login to Linux
+```
+vagrant ssh
+```
+3. update and upgrade
+```
+sudo apt-get update && sudo apt-get upgrade
+```
+4. install docker
+```
+sudo apt-get install docker.io -y
+sudo systemctl start docker
+sudo usermod -aG docker $(whoami)
+```
+5. install python
+```
+sudo apt-get install python -y
+```
+6. install python pip
+```
+sudo apt-get install python-pip -y
+```
+7. install docker python
+```
+sudo pip install docker-py
+```
+8. Install and Set Up kubectl
+```
+sudo snap install kubectl --classic
+```
+9. setup ICP client config
+- obtain from the ICP menu 'Configure Client' at top right corner of ICP screen
+- copy and paste to the command console and hit return
+10. configure 'etc/hosts' file to your master.cfc IP
+open 'etc/hosts' and your the IP accordingly
+```
+xxx.xxx.xxx.xxx master.cfc
+```
+11. login to master private docker Repository
+```
+docker login master.cfc:8500
+```
+12. Docker commands
+## list images
+```
+docker images
+```
+## To build image
+Example
+```
+docker build -t mbdemo .
+```
+## Tag image
+```
+docker tag mbdemo master.cfc:8500/test/mbdemo:v1.1
+```
+## push image to master private repo
+```
+docker push master.cfc:8500/test/mbdemo:v1.1
+```
 
 
-# start the ubuntu linux
+# References
+
+## start the ubuntu linux
 ```
 vagrant up
 ```
 
-# suspend linux
+## suspend linux
 ```
 vagrant suspend
 ```
 
-# resume linux
+## resume linux
 ```
 vagrant resume
 ```
 
-# reload after edit Vagrantfile
+## reload after edit Vagrantfile
 ```
 vagrant reload
 ```
 
-# login to the linux
+## login to the linux
 ```
-vagrant ssh-keygen
+vagrant ssh
 ```
-# update the linux
+
+## working the synched folder of host
+below folder is a synched folder between linux and the host
+```
+cd /vagrant
+```
+
+## update the linux
 ```
 sudo apt-get update && sudo apt-get upgrade
 ```
 
-# install docker
+## install docker
 ```
 sudo apt-get install docker.io -y
 ```
 
-# start docker daemon
+## start docker daemon
 ```
 sudo systemctl start docker
 ```
 
-# set user of docker
+## set user of docker
 ```
 sudo usermod -aG docker $(whoami)
 ```
 
-# install python
+## install python
 ```
 sudo apt-get install python -y
 ```
 
-# install python pip
+## install python pip
 ```
 sudo apt-get install python-pip -y
 ```
 
-# install docker python
+## install docker python
 ```
 sudo pip install docker-py
 ```
 
-# install helm
+## install helm
 ```
 curl https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get > get_helm.sh
 chmod 700 get_helm.sh
@@ -75,21 +149,21 @@ chmod 700 get_helm.sh
 
 [Install helm](https://github.com/kubernetes/helm/blob/master/docs/install.md)
 
-# Install and Set Up kubectl
+## Install and Set Up kubectl
 ```
 sudo snap install kubectl --classic
 ```
 
 [Install and Set Up kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
-# test kuberctl with your cluster
+## test kuberctl with your cluster
 ensure you setup your IBM Clouad Private kube client token
 
 ```
 kubectl cluster-info
 ```
 
-# push or pull images from your local file system to the private image registry
+## push or pull images from your local file system to the private image registry
 Docker image is on a node that is outside of your cluster, set up authentication from that node to the cluster
 
 [Setup instruction](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_1.2.0/manage_images/using_docker_cli.html)
@@ -100,6 +174,10 @@ docker login master.cfc:8500
 
 ```
 docker build -t hello-world-image .
+
+docker tag mbdemo master.cfc:8500/test/mbdemo:v1.1
+docker push master.cfc:8500/test/mbdemo:v1.1
+
 ```
 
 # install bluemix CLI
