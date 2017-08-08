@@ -170,7 +170,32 @@ To deploy your application, go to
   - Port: 9000 (choose any port of your choice)
   - Target Port: 9080 (this is your Liberty app port default 9080)
 
+### Deploy the docker image
+
+
 Alternatively, you can define this as a deployment yml file.
+#### Deploy using deployment.yaml
+```
+kubectl create -f deployment.yml --save-config
+```
+
+#### Deploy using UI
+![Deploy application dialog](https://github.com/jaricsng/ibm-cloud-private/blob/master/deploy-app-dialog-1.png)
+![Deploy application dialog](https://github.com/jaricsng/ibm-cloud-private/blob/master/deploy-app-dialog-2.png)
+### Expose the application endpoint
+#### Expose the Service to Internet
+```
+kubectl expose deployment hello-world-deployment --type="LoadBalancer"
+```
+#### Expose using UI
+![Expose application dialog](https://github.com/jaricsng/ibm-cloud-private/blob/master/expose-app-service.png)
+![Expose application dialog](https://github.com/jaricsng/ibm-cloud-private/blob/master/expose-port-mapping.png)
+
+### Access the application
+![Access application](https://github.com/jaricsng/ibm-cloud-private/blob/master/access-app-1.png)
+![Access application](https://github.com/jaricsng/ibm-cloud-private/blob/master/access-app-2.png)
+![Access application](https://github.com/jaricsng/ibm-cloud-private/blob/master/access-app-3.png)
+
 
 # References
 
