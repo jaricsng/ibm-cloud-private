@@ -59,19 +59,6 @@ docker login master.cfc:8500
 ```
 docker images
 ```
-## To build image
-Example
-```
-docker build -t mbdemo .
-```
-## Tag image
-```
-docker tag mbdemo master.cfc:8500/test/mbdemo:v1.1
-```
-## push image to master private repo
-```
-docker push master.cfc:8500/test/mbdemo:v1.1
-```
 13. Install bluemix configuration
 - Install bluemix CLI
 ```
