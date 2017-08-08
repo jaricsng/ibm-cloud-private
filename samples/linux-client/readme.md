@@ -1,3 +1,6 @@
+# Overview
+The following instruction helps you to create a linux client environment where you can create microservice using IBM MicroService Builder, build, package, push image to IBM Cloud Priate where you can deploy (rollout), rollback, scale, your application.
+
 # Pre requisites
 - install Vagrant
 - install Virtualbox
@@ -70,7 +73,7 @@ bx plugin install dev -r Bluemix
 ```
 14. Install Maven
 ```
-sudo apt-get install maven
+sudo apt-get install maven -y
 ```
 15. Install Git
 ```
@@ -78,9 +81,14 @@ sudo apt-get install git
 ```
 16. Install Groovy
 ```
-sudo apt-get install groovy
+sudo apt-get install groovy -y
 ```
 17. Create a new microservice
+- Install Java JDK Before you create microservice
+```
+sudo apt-get install default-jdk -y
+```
+
 ```
 bx dev create
 ```
@@ -143,12 +151,25 @@ http://192.168.122.200:9080/mbdemo/v1/example
 http://192.168.122.200:9080/mbdemo/health
 ```
 22. If all is good, you are ready to tag and push your image to master.cfc
+the push command below push the image to a namespace 'test', once the image is ready for production you can change it to 'global' namespace for all to use.
+
 ```
 docker login master.cfc
 docker tag mbdemo master.cfc:8500/test/mbdemo:v1.0
 docker push master.cfc:8500/test/mbdemo:v1.0
 ```
 23. Deploy application in IBM Cloud Private
+To deploy your application, go to
+- workloads/application/Deploy Application
+- In General: enter a name of your choice and define the number of replicas to be deployed
+- Container Setting: specifies name and the image: 'master.cfc:8500/test/mbdemo:v1.0'
+- you need to expose the application, otherwise the application is not accessible from outside ICP.
+- Search for your deployed application, then in the 'Action' column, choose 'Expose', specify
+  - Name: 'http'
+  - Port: 9000 (choose any port of your choice)
+  - Target Port: 9080 (this is your Liberty app port default 9080)
+
+Alternatively, you can define this as a deployment yml file.
 
 # References
 
@@ -249,9 +270,9 @@ Enter a number> 1
 1. Java
 Enter a number> 1
 
-? Enter a name for your project> jsLibertyApp
+? Enter a name for your project> mbdemo
 
-The project, jsLibertyApp, has been successfully saved into the current directory.
+The project, mbdemo, has been successfully saved into the current directory.
 OK
 ```
 ## Edit the example source codes
@@ -278,6 +299,7 @@ public class Example {
 ```
 
 ## build only the application
+make sure you change folder to your project folder 'mbdemo', then run
 ```
 mvn install
 ```
@@ -332,7 +354,7 @@ bx plugin install dev -r Bluemix
 ### Install JDK on ubuntu
 [help notes on install and managing JDK environment](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-get-on-ubuntu-16-04)
 ```
-sudo apt-get install default-jdk
+sudo apt-get install default-jdk -y
 ```
 
 ### Install Oracle JDK
