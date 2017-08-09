@@ -8,6 +8,11 @@ The following instruction helps you to create a linux client environment where y
 Vagrant allow the rapid creation of a Linux environment using Virtualbox and automatically
 mount a [synchronize folder](https://www.vagrantup.com/docs/synced-folders/) with the host.
 
+**Note: updated Vagrantfile using bootstrap.sh to install pre requisites components.**
+```
+# config.vm.provision :shell, path: "bootstrap.sh"
+```
+
 Steps
 1. Start Linux with
 ```
@@ -18,28 +23,34 @@ vagrant up
 vagrant ssh
 ```
 3. update and upgrade
+- [x] install bootstrap.sh
 ```
 sudo apt-get update && sudo apt-get upgrade
 ```
 4. install docker
+- [x] install bootstrap.sh
 ```
 sudo apt-get install docker.io -y
 sudo systemctl start docker
 sudo usermod -aG docker $(whoami)
 ```
 5. install python
+- [x] install bootstrap.sh
 ```
 sudo apt-get install python -y
 ```
 6. install python pip
+- [x] install bootstrap.sh
 ```
 sudo apt-get install python-pip -y
 ```
 7. install docker python
+- [x] install bootstrap.sh
 ```
 sudo pip install docker-py
 ```
 8. Install and Set Up kubectl
+- [x] install bootstrap.sh
 ```
 sudo snap install kubectl --classic
 ```
@@ -64,32 +75,40 @@ docker images
 ```
 13. Install bluemix configuration
 - Install bluemix CLI
+- [x] install bootstrap.sh
 ```
 sh <(curl -fsSL https://clis.ng.bluemix.net/install/linux)
 ```
 -  Install bluemix dev plugin
+- [x] install bootstrap.sh
 ```
 bx plugin install dev -r Bluemix
 ```
 14. Install Maven
+- [x] install bootstrap.sh
 ```
 sudo apt-get install maven -y
 ```
 15. Install Git
+- [x] install bootstrap.sh
 ```
 sudo apt-get install git
 ```
 16. Install Groovy
+- [x] install bootstrap.sh
 ```
 sudo apt-get install groovy -y
 ```
 17. Create a new microservice
-- Install Java JDK Before you create microservice
+- Install Java JDK Before you create microservice.
+- [x] install bootstrap.sh
 ```
 sudo apt-get install default-jdk -y
 ```
+change directory to '/vagrant' the synced-folders of your linux and your host folder.
 
 ```
+cd /vagrant
 bx dev create
 ```
 ```
