@@ -17,3 +17,4 @@ sudo apt-get update && sudo apt-get upgrade -y
 bx plugin install dev -r Bluemix
 cp -R /root/.bluemix/ /home/ubuntu/
 sudo chown -R ubuntu:ubuntu /home/ubuntu/.bluemix/
+echo "export DOCKER_API_VERSION=1.24" | sudo tee -a /etc/profile

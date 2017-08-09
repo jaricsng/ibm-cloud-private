@@ -8,10 +8,8 @@ The following instruction helps you to create a linux client environment where y
 Vagrant allow the rapid creation of a Linux environment using Virtualbox and automatically
 mount a [synchronize folder](https://www.vagrantup.com/docs/synced-folders/) with the host.
 
-**Note: updated Vagrantfile using bootstrap.sh to install pre requisites components.**
-```
-# config.vm.provision :shell, path: "bootstrap.sh"
-```
+**Note**
+the Vagrantfile is updated to run *bootstrap.sh* script where it will install the pre requisites
 
 Steps
 1. Start Linux with
@@ -23,34 +21,34 @@ vagrant up
 vagrant ssh
 ```
 3. update and upgrade
-- [x] install bootstrap.sh
+*you can skip, performed in bootstrap.sh script*
 ```
 sudo apt-get update && sudo apt-get upgrade
 ```
 4. install docker
-- [x] install bootstrap.sh
+*you can skip, performed in bootstrap.sh script*
 ```
 sudo apt-get install docker.io -y
 sudo systemctl start docker
 sudo usermod -aG docker $(whoami)
 ```
 5. install python
-- [x] install bootstrap.sh
+*you can skip, performed in bootstrap.sh script*
 ```
 sudo apt-get install python -y
 ```
 6. install python pip
-- [x] install bootstrap.sh
+*you can skip, performed in bootstrap.sh script*
 ```
 sudo apt-get install python-pip -y
 ```
 7. install docker python
-- [x] install bootstrap.sh
+*you can skip, performed in bootstrap.sh script*
 ```
 sudo pip install docker-py
 ```
 8. Install and Set Up kubectl
-- [x] install bootstrap.sh
+*you can skip, performed in bootstrap.sh script*
 ```
 sudo snap install kubectl --classic
 ```
@@ -74,41 +72,42 @@ docker login master.cfc:8500
 docker images
 ```
 13. Install bluemix configuration
+*you can skip, performed in bootstrap.sh script*
 - Install bluemix CLI
-- [x] install bootstrap.sh
 ```
 sh <(curl -fsSL https://clis.ng.bluemix.net/install/linux)
 ```
 -  Install bluemix dev plugin
-- [x] install bootstrap.sh
+*you can skip, performed in bootstrap.sh script*
 ```
 bx plugin install dev -r Bluemix
 ```
 14. Install Maven
-- [x] install bootstrap.sh
+*you can skip, performed in bootstrap.sh script*
 ```
 sudo apt-get install maven -y
 ```
 15. Install Git
-- [x] install bootstrap.sh
+*you can skip, performed in bootstrap.sh script*
 ```
 sudo apt-get install git
 ```
-16. Install Groovy
-- [x] install bootstrap.sh
+16. Install Groovy and JDK
+*you can skip, performed in bootstrap.sh script*
 ```
 sudo apt-get install groovy -y
 ```
-17. Create a new microservice
-- Install Java JDK Before you create microservice.
-- [x] install bootstrap.sh
+- Install Java JDK Before you create microservice
 ```
 sudo apt-get install default-jdk -y
 ```
-change directory to '/vagrant' the synced-folders of your linux and your host folder.
-
+17. Create a new microservice
+- change folder to synched folder 'vagrant'
 ```
 cd /vagrant
+```
+- create microservice starter template
+```
 bx dev create
 ```
 ```
@@ -156,11 +155,16 @@ public class Example {
 }
 ```
 19. build only the application
+- change folder to your project 'mbdemo'
+```
+cd mbdemo
+```
+- build the maven project
 ```
 mvn install
 ```
 20. build and run the application
-If you encountered
+- start and test the application
 ```
 bx dev run
 ```
@@ -171,18 +175,22 @@ http://192.168.122.200:9080/mbdemo/v1/example
 http://192.168.122.200:9080/mbdemo/health
 ```
 22. If all is good, you are ready to tag and push your image to master.cfc
-the push command below push the image to a namespace 'test', once the image is ready for production you can change it to 'global' namespace for all to use.
+Create a namespace of your choice in ICP.
+
+the push command below push the image to a namespace '**test**', you should should tag and push your image to namespace you created above.
+
+once the image is ready for production you can change it to 'global' namespace for all to use.
 
 ```
 docker login master.cfc
-docker tag mbdemo master.cfc:8500/test/mbdemo:v1.0
-docker push master.cfc:8500/test/mbdemo:v1.0
+docker tag mbdemo master.cfc:8500/**test**/mbdemo:v1.0
+docker push master.cfc:8500/**test**/mbdemo:v1.0
 ```
 23. Deploy application in IBM Cloud Private
 To deploy your application, go to
 - workloads/application/Deploy Application
 - In General: enter a name of your choice and define the number of replicas to be deployed
-- Container Setting: specifies name and the image: 'master.cfc:8500/test/mbdemo:v1.0'
+- Container Setting: specifies name and the image: 'master.cfc:8500/**test**/mbdemo:v1.0'
 - you need to expose the application, otherwise the application is not accessible from outside ICP.
 - Search for your deployed application, then in the 'Action' column, choose 'Expose', specify
   - Name: 'http'
