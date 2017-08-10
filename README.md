@@ -142,6 +142,10 @@ kubectl expose deployment hello-world-deployment --type="LoadBalancer"
 - [Deploying the sample via a pipeline to IBM Cloud Private aka IBM Spectrum Conductor for Containers (CfC)](https://github.com/WASdev/sample.microservicebuilder.docs/blob/master/full_cfc.md)
 - [Networking with Kubernetes](https://www.youtube.com/watch?v=WwQ62OyCNz4)
 
+# Organizational roles
+- [Organizational roles:](https://www.ibm.com/devops/method/content/culture/practice_organizational_roles/1_0) DevOps at scale calls for a number of common roles, each requiring unique skills and domain knowledge.
+- [Get started](https://www.ibm.com/devops/method/content/course/get_started_agile_cd/0) with agile development and continuous delivery
+
 # Videos
 [IBM Spectrum Conductor for Containers Community Edition](https://www.youtube.com/watch?v=jchAHkc9rDo)
 - demonstrate adding docker images

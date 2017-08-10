@@ -440,3 +440,16 @@ export DOCKER_API_VERSION=1.24
 ```
 
 [for other methods due to docker API incompatibility](https://stackoverflow.com/questions/43072703/client-is-newer-than-server-client-api-version-1-24-server-api-version-1-21)
+
+### error encountered with recent version of bx dev
+date: 9 Aug 2017
+issue:
+when we run, encountered the following error message.
+```
+bx dev run
+The run-cmd option was not specified
+Cannot access the Docker engine. Install or start the Docker engine before proceeding
+Cannot access the Docker engine. Install or start the Docker engine before proceeding
+```
+solution:
+**TODO**
