@@ -142,7 +142,8 @@ kubectl expose deployment hello-world-deployment --type="LoadBalancer"
 - [Deploying the sample via a pipeline to IBM Cloud Private aka IBM Spectrum Conductor for Containers (CfC)](https://github.com/WASdev/sample.microservicebuilder.docs/blob/master/full_cfc.md)
 - [Networking with Kubernetes](https://www.youtube.com/watch?v=WwQ62OyCNz4)
 
-# Video [IBM Spectrum Conductor for Containers Community Edition](https://www.youtube.com/watch?v=jchAHkc9rDo)
+# Videos
+[IBM Spectrum Conductor for Containers Community Edition](https://www.youtube.com/watch?v=jchAHkc9rDo)
 - demonstrate adding docker images
 - image namespace
 - deploy images
@@ -151,3 +152,5 @@ kubectl expose deployment hello-world-deployment --type="LoadBalancer"
 - rollback application e.g from httpd back to nginx
 - create storage, volume, mounting to application at deployment
 - create users, namespace
+[Build and Continuously Deliver a Java Microservices App in IBM Cloud private](https://www.ibm.com/developerworks/community/blogs/5092bd93-e659-4f89-8de2-a7ac980487f0/entry/Build_and_Continuously_Deliver_a_Java_Microservices_App_in_IBM_Cloud_private?lang=en)
+- shows key services we used, and how an application, “Stock Trader”, is setup and deployed, a Java microservices app running in Liberty, that uses not only Db2, MQ, and Redis, but also connects to our public cloud.
