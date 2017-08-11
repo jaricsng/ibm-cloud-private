@@ -15,6 +15,6 @@ sudo apt-get install default-jdk -y
 sudo apt-get install groovy -y
 sudo apt-get update && sudo apt-get upgrade -y
 bx plugin install dev -r Bluemix
-cp -R /root/.bluemix/ /home/ubuntu/
+cp -R /root/.bluemix/ /home/ubuntu/.bluemix/
 sudo chown -R ubuntu:ubuntu /home/ubuntu/.bluemix/
 echo "export DOCKER_API_VERSION=1.24" | sudo tee -a /etc/profile
