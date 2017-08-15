@@ -19,18 +19,13 @@
 - [Configuring the Kubernetes CLI by using service account tokens](https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/Configuring_the_Kubernetes_CLI_by_using_service_account_tokens1?lang=en)
 - [Running Jenkins workloads in an IBM Cloud private environment](https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/CI_CD_Integration_with_Jenkins_in_CFC1?lang=en)
 - [Autoscaling in IBM Cloud private](https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/Autoscaling_in_IBM_Spectrum_for_Containers_clusters?lang=en)
-- [How Watson Health Cloud Deploys Applications with Kubernetes](http://blog.kubernetes.io/2017/07/how-watson-health-cloud-deploys.html)
 
 # Microservice Builder
 - [Installing the Microservice Builder fabric on to IBM Cloud private](https://www.ibm.com/support/knowledgecenter/SS5PWC/installing_fabric_task.html)
 - [Setting up the Microservice Builder pipeline](https://www.ibm.com/support/knowledgecenter/SS5PWC/pipeline.html)
 - [Install Microservice Builder ELK sample](https://github.com/WASdev/sample.microservicebuilder.helm.elk/blob/master/installing_sample_elk_task.md)
 - [Using the ELK Sample](https://github.com/WASdev/sample.microservicebuilder.helm.elk/blob/master/sample_elk_task.md)
-- Video [Microservice Builder: come build Docker containerized apps with us](https://www.youtube.com/watch?v=8w-XqDAD18g)
 
-# DevOps UrbanCode Deploy
-- [Enhance your Kubernetes Experience with UrbanCode Deploy](https://developer.ibm.com/urbancode/2017/06/28/enhance-kubernetes-experience-urbancode-deploy/)
-- [Kubernetes Blue-Green Deployments Made Easy with UrbanCode Deploy](https://developer.ibm.com/urbancode/2017/07/26/kubernetes-blue-green-deployments-made-easy-urbancode-deploy/)
 
 # User access via ICP UI
 
@@ -137,24 +132,3 @@ kubectl expose deployment hello-world-deployment --type="LoadBalancer"
 - [IBM Helm chart repo](https://raw.githubusercontent.com/IBM/charts/master/repo/stable/)
 - [Microservice Builder](https://developer.ibm.com/microservice-builder/)
 - [Using RBAC Authorization](https://kubernetes.io/docs/admin/authorization/rbac/)
-- [Kubernetes tutorials](https://kubernetes.io/docs/tutorials/)
-- [About WebSphere Liberty](https://developer.ibm.com/wasdev/websphere-liberty/)
-- [Deploying the sample via a pipeline to IBM Cloud Private aka IBM Spectrum Conductor for Containers (CfC)](https://github.com/WASdev/sample.microservicebuilder.docs/blob/master/full_cfc.md)
-- [Networking with Kubernetes](https://www.youtube.com/watch?v=WwQ62OyCNz4)
-
-# Organizational roles
-- [Organizational roles:](https://www.ibm.com/devops/method/content/culture/practice_organizational_roles/1_0) DevOps at scale calls for a number of common roles, each requiring unique skills and domain knowledge.
-- [Get started](https://www.ibm.com/devops/method/content/course/get_started_agile_cd/0) with agile development and continuous delivery
-
-# Videos
-[IBM Spectrum Conductor for Containers Community Edition](https://www.youtube.com/watch?v=jchAHkc9rDo)
-- demonstrate adding docker images
-- image namespace
-- deploy images
-- Scaling
-- update application e.g. nginx to httpd
-- rollback application e.g from httpd back to nginx
-- create storage, volume, mounting to application at deployment
-- create users, namespace
-[Build and Continuously Deliver a Java Microservices App in IBM Cloud private](https://www.ibm.com/developerworks/community/blogs/5092bd93-e659-4f89-8de2-a7ac980487f0/entry/Build_and_Continuously_Deliver_a_Java_Microservices_App_in_IBM_Cloud_private?lang=en)
-- shows key services we used, and how an application, “Stock Trader”, is setup and deployed, a Java microservices app running in Liberty, that uses not only Db2, MQ, and Redis, but also connects to our public cloud.

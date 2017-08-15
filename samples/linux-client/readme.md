@@ -182,7 +182,7 @@ the push command below push the image to a namespace '**test**', you should shou
 once the image is ready for production you can change it to 'global' namespace for all to use.
 
 ```
-docker login master.cfc
+docker login master.cfc:8500
 docker tag mbdemo master.cfc:8500/**test**/mbdemo:v1.0
 docker push master.cfc:8500/**test**/mbdemo:v1.0
 ```
