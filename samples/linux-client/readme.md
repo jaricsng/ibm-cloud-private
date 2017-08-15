@@ -380,6 +380,14 @@ create a repo in github and follows the commands as provided by github, in my ca
 
 my sample project can be found [here](https://github.com/js-ibm/mbdemo)
 
+# Liberty app accelerator
+[Liberty app accelerator generator](https://liberty-app-accelerator.wasdev.developer.ibm.com/start/)
+
+# Using eclipse
+
+[Import maven project into eclipse](https://developer.ibm.com/wasdev/docs/running-java-ee-7-samples-liberty-using-eclipse/)
+[Liberty and Eclipse: Create a server](https://www.ibm.com/blogs/bluemix/2016/05/liberty-and-eclipse-create-server-p10/)
+
 
 # Troubleshooting
 
