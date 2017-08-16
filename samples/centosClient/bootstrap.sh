@@ -4,7 +4,7 @@ sudo yum -y update
 curl -fsSL https://get.docker.com/ | sh
 sudo systemctl start docker
 sudo systemctl enable docker
-sudo usermod -aG docker $(whoami)
+sudo usermod -aG docker vagrant
 sudo yum groupinstall -y development
 sudo yum install -y zlib-dev openssl-devel sqlite-devel bzip2-devel
 wget http://www.python.org/ftp/python/2.7.13/Python-2.7.13.tar.xz
