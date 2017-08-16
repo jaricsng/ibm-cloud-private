@@ -48,9 +48,9 @@ sudo yum install git
 sudo curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
-# sh <(curl -fsSL https://clis.ng.bluemix.net/install/linux)
-# bx plugin install dev -r Bluemix
-# sudo cp -R /root/.bluemix/ /home/vagrant/.bluemix
-# sudo chown -R vagrant:vagrant /home/vagrant/.bluemix/
+sh <(curl -fsSL https://clis.ng.bluemix.net/install/linux)
+bx plugin install dev -r Bluemix
+sudo cp -R /root/.bluemix/ /home/vagrant/.bluemix
+sudo chown -R vagrant:vagrant /home/vagrant/.bluemix/
 echo "export DOCKER_API_VERSION=1.24" | sudo tee -a /home/vagrant/.bash_profile
 #sudo yum -y update
