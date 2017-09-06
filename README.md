@@ -1,5 +1,8 @@
 # IBM Cloud Private Notebook
 
+Latest:
+[IBM Cloud Private 2.1 beta is available NOW in DockerHub](https://www.ibm.com/blogs/bluemix/2017/09/ibm-cloud-private-2-1-beta-1-available/)
+
 # Preparation
 - [preparing the cluster for installation](https://www.ibm.com/support/knowledgecenter/en/SSBS6K_1.2.0/installing/prep_cluster.html)
 
