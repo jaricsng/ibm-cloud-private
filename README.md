@@ -12,7 +12,11 @@ Latest:
 - [Installing IBM Cloud private-ce in offline mode](https://developer.ibm.com/recipes/tutorials/installing-ibm-cloud-privatece-in-offline-mode/)
 
 # Use Cases
-
+- [Machine Learning (ML) for DSX](https://www.youtube.com/watch?v=Kgb4QmojBN4&list=PL7FnN5oi7Ez9DOMMjKFu1Y5ECc0dGPxwb&index=2)
+- [ML use case 1](https://medium.com/inside-machine-learning/exploring-insights-on-sepsis-from-medical-literature-5309a4179d4c)
+- [ML Use case 2](https://www.youtube.com/watch?v=KxlWa0BNR5s&list=PL7FnN5oi7Ez9DOMMjKFu1Y5ECc0dGPxwb&index=5)
+- [DSX: Working with an external spark cluster](https://www.youtube.com/watch?v=htGZ1Iomeec)
+- [Invoking ML from an external app](https://www.youtube.com/watch?v=8sR5aVCzZ38&list=PL7FnN5oi7Ez9DOMMjKFu1Y5ECc0dGPxwb&index=6)
 - [Deploy MQ into IBM Cloud private](https://developer.ibm.com/recipes/tutorials/deploy-mq-into-ibm-cloud-private/)
 - [Working with storage](https://www.ibm.com/developerworks/community/blogs/fe25b4ef-ea6a-4d86-a629-6f87ccf4649e/entry/Working_with_storage?lang=en)
 - [Setting up the Microservice Builder pipeline](https://www.ibm.com/support/knowledgecenter/en/SS5PWC/pipeline.html)
