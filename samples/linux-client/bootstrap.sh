@@ -19,3 +19,14 @@ cp -R /root/.bluemix/ /home/ubuntu/.bluemix/
 sudo chown -R ubuntu:ubuntu /home/ubuntu/.bluemix/
 echo "export DOCKER_API_VERSION=1.24" | sudo tee -a /etc/profile
 sudo apt-get update && sudo apt-get upgrade
+curl -O https://dl.google.com/go/go1.12.1.linux-amd64.tar.gz
+tar xvf go1.12.1.linux-amd64.tar.gz
+sudo chown -R root:root ./go
+echo "export GOROOT=$HOME/go" >> ~/.profile
+source ~/.profile
+echo "export GOPATH=$HOME/work" >> ~/.profile
+source ~/.profile
+mkdir $GOPATH/bin
+echo "export PATH=$PATH:$GOROOT/bin:$GOPATH/bin" >> ~/.profile
+source ~/.profile
+
