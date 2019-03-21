@@ -4,7 +4,7 @@ sudo apt-get update && sudo apt-get upgrade
 sudo apt-get install docker.io -y
 sudo apt-get install python -y
 sudo systemctl start docker
-sudo usermod -aG docker ubuntu
+sudo usermod -aG docker $(whoami)
 sudo apt-get install python-pip -y
 sudo pip install docker-py
 sudo snap install kubectl --classic
