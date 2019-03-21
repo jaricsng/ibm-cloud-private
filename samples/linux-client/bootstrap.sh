@@ -26,7 +26,7 @@ echo "export GOROOT=$HOME/go" >> ~/.profile
 source ~/.profile
 echo "export GOPATH=$HOME/work" >> ~/.profile
 source ~/.profile
-mkdir $GOPATH/bin
+mkdir -p $GOPATH/work/bin
 echo "export PATH=$PATH:$GOROOT/bin:$GOPATH/bin" >> ~/.profile
 source ~/.profile
 curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
