@@ -26,8 +26,10 @@ echo "export GOROOT=$HOME/go" >> ~/.profile
 source ~/.profile
 echo "export GOPATH=$HOME/work" >> ~/.profile
 source ~/.profile
-mkdir -p $GOPATH/work/bin
+mkdir -p $GOPATH/bin
 echo "export PATH=$PATH:$GOROOT/bin:$GOPATH/bin" >> ~/.profile
 source ~/.profile
 curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
+pip install --upgrade pip
+sudo apt-get update && sudo apt-get upgrade
 
